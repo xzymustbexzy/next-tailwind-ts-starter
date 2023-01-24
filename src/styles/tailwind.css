@@ -1,0 +1,25 @@
+:root .dark {
+  --color-brand-main: #046380;
+  --color-brand-1: #8485FF;
+  --color-brand-2: #2B2CAC;
+  --color-brand-1-30: rgba(132, 133, 255, 0.3);
+  --color-stress: #FFFFFF;
+  --color-title: rgba(255, 255, 255, 0.85);
+  --color-primary: rgba(255, 255, 255, 0.65);
+  --color-secondary: rgba(255, 255, 255, 0.45);
+  --color-disable: rgba(255, 255, 255, 0.3);
+  --color-border: rgba(255, 255, 255, 0.2);
+  --color-divider: rgba(255, 255, 255, 0.12);
+  --color-bg-primary: #000000;
+  --color-bg-secondary: #191919;
+  --color-bg-tertiary: #2B2B2B;
+  --color-link: rgba(24, 144, 255, 0.85);
+  --color-success: rgba(0, 204, 118, 0.85);
+  --color-warn: rgba(250, 186, 20, 0.85);
+  --color-accent: rgba(255, 77, 77, 0.85);
+  --color-error: #E23434;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

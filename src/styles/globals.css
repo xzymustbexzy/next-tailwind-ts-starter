@@ -1,0 +1,43 @@
+.blink-text {
+    --characters: 26;
+    --typingSpeed: 5s;
+
+    position: relative;
+}
+
+.blink-text::before .blink-text::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.blink-text::before {
+    background: #333;
+    width: 10px;
+    height: 10px;
+    animation: typing var(--typingSpeed) steps(var(--characters)) 2s infinite;
+}
+
+.blink-text::after {
+    background: green;
+    width: 10px;
+    height: 10px;
+    animation:
+         typing var(--typingSpeed) steps(var(--characters)) 2s infinite,
+         blinking 0.25s ease alternate infinite;
+}
+
+@keyframes blinking {
+    to {
+        background: transparent;
+    }
+}
+
+@keyframes typing {
+    80%, 100% {
+        left: 100%;
+    }
+}
