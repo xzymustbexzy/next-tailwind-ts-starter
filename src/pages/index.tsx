@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Header } from '@/components/header';
 import { LeftMenu } from '@/components/left_menu';
 import { MainArea } from '@/components/main_area';
@@ -22,3 +23,13 @@ const APP = () => {
 }
 
 export default APP;
+=======
+
+const HomePage = () => {
+    return (
+        <div>Hello world!</div>
+    )
+}
+
+export default HomePage;
+>>>>>>> 980007e7796862484fdc37f75638889c02946af5
