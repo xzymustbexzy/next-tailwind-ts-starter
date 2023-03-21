@@ -60,7 +60,7 @@ const CommandRow = forwardRef((props: {
 
 export const TerminalArea = () => {
   const [commandHistory, setCommandHistory] = useState<Command[]>([{
-    command: "hello",
+    command: "USE model_name",
     response: "hi",
   }]);
   const currentRowRef = useRef<HTMLTextAreaElement>(null);

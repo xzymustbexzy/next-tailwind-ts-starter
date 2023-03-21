@@ -11,7 +11,7 @@ const APP = () => {
     <div className="h-screen">
       <Header/>
       <div className="w-screen h-full pt-16 flex">
-        <LeftMenu />
+        {/*<LeftMenu />*/}
         <div className="flex-1 h-full flex flex-col">
           <MainArea></MainArea>
           <TerminalArea />

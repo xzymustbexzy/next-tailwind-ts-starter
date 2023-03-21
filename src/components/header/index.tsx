@@ -11,7 +11,7 @@ const Logo = () => {
   return (
     <div className="px-6 h-full flex items-center cursor-pointer">
       <div className="">
-        <img className="h-6" src="assets/logo.svg"/>
+        <img className="h-9" src="/assets/logo/DoveDBlatestlogo.png"/>
       </div>
     </div>
   )
@@ -48,13 +48,20 @@ const SearchBar = () => {
 export const Header = () => {
   return (
   <div className="w-screen bg-white h-16 border-b border-b-slate-300 z-30 fixed top-0">
-    <div className="flex justify-between items-center h-full">
+    <div className="flex justify-start items-center h-full w-full">
       <Logo />
-      <div className="h-full flex gap-4 items-start pt-3 px-7">
-        <SearchBar />
-        <HeaderLinkWrapper textHint="Open terminal"><TerminalIcon className="w-full h-full"/></HeaderLinkWrapper>
-        <HeaderLinkWrapper textHint="Dark mode"><DarkModeIcon className="w-full h-full"/></HeaderLinkWrapper>
-        <HeaderLinkWrapper textHint="Github link"><GitHubIcon className="w-full h-full"/></HeaderLinkWrapper>
+      {/*<div className="h-full flex gap-4 items-start pt-3 px-7">*/}
+      {/*  <SearchBar />*/}
+      {/*  <HeaderLinkWrapper textHint="Open terminal"><TerminalIcon className="w-full h-full"/></HeaderLinkWrapper>*/}
+      {/*  <HeaderLinkWrapper textHint="Dark mode"><DarkModeIcon className="w-full h-full"/></HeaderLinkWrapper>*/}
+      {/*  <HeaderLinkWrapper textHint="Github link"><GitHubIcon className="w-full h-full"/></HeaderLinkWrapper>*/}
+      {/*</div>*/}
+      <div className="h-full flex gap-4 items-start w-full flex items-center justify-center mr-[150px]">
+        <span style={{
+          fontFamily: "Helvetica",
+          fontSize: "21px",
+          fontWeight: "600",
+        }}>DoveDB: A Declarative and Low-Latency Video Database</span>
       </div>
     </div>
   </div>);

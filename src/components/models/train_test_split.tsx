@@ -1,4 +1,5 @@
 import {Box, Paper, Slider} from "@mui/material";
+import {useState} from "react";
 
 
 function valuetext(value: number) {
@@ -28,6 +29,13 @@ const TrainTestNumberInfo = (props: {
 }
 
 const TrainTestSplit = () => {
+  const [totalNum, setTotalNum] = useState<number>(246);
+  const [ratio, setRatio] = useState<number[]>([70, 90]);
+
+  const trainSize = Math.round(totalNum * ratio[0] / 100);
+  const testSize = Math.round(totalNum * (100 - ratio[1]) / 100);
+  const valSize = totalNum - trainSize - testSize;
+
   const marks = [];
   for (let i = 0; i <= 100; i += 10) {
     marks.push({
@@ -40,7 +48,10 @@ const TrainTestSplit = () => {
         track={false}
         aria-labelledby="track-inverted-range-slider"
         getAriaValueText={valuetext}
-        defaultValue={[70, 90]}
+        value={ratio}
+        onChange={(event: Event, newValue: number | number[]) => {
+          setRatio(newValue as number[]);
+        }}
         marks={marks}
     />
     <Box
@@ -54,9 +65,9 @@ const TrainTestSplit = () => {
           },
         }}
     >
-      <TrainTestNumberInfo title={"Training Set"} imagesNum={612} percentage={70} color={"bg-amber-500"} />
-      <TrainTestNumberInfo title={"Training Set"} imagesNum={123} percentage={20} color={"bg-cyan-500"} />
-      <TrainTestNumberInfo title={"Training Set"} imagesNum={53} percentage={10} color={"bg-green-500"} />
+      <TrainTestNumberInfo title={"Training Set"} imagesNum={trainSize} percentage={ratio[0]} color={"bg-amber-500"} />
+      <TrainTestNumberInfo title={"Validation Set"} imagesNum={valSize} percentage={ratio[1] - ratio[0]} color={"bg-cyan-500"} />
+      <TrainTestNumberInfo title={"Test Set"} imagesNum={testSize} percentage={100 - ratio[1]} color={"bg-green-500"} />
     </Box>
     <div className={"flex flex-wrap gap-x-5 gap-y-3 flex-1 overflow-y-scroll px-8"}>
       <img className={"w-40 h-24"} src={"/assets/test/test.png"} />

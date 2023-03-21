@@ -171,15 +171,18 @@ const CreateModel = (props: {
             </Typography>
             <Box sx={{display: 'flex', flexDirection: 'row', pt: 2}}>
               <Button
-                  color="inherit"
                   disabled={activeStep === 0}
                   onClick={handleBack}
                   sx={{mr: 1}}
+                  className={"bg-stone-300/50 text-black w-32 mx-5"}
               >
                 Back
               </Button>
               <Box sx={{flex: '1 1 auto'}}/>
-              <Button onClick={handleNext}>
+              <Button
+                onClick={handleNext}
+                className={"bg-cyan-500/60 text-white w-32 mx-5"}
+              >
                 {activeStep === steps.length - 1 ? 'Start Training' : 'Next'}
               </Button>
             </Box>

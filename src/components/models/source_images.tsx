@@ -1,17 +1,26 @@
 import { FileUploader } from "react-drag-drop-files";
 import {useState} from "react";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
+import {setUseProxies} from "immer";
+import LinearProgress from "@mui/material/LinearProgress";
 
 const fileTypes = ["JPG", "PNG", "GIF"];
 
 const SourceImages = () => {
   const [file, setFile] = useState<any>(null);
+  const [isUploading, setIsUploading] = useState<boolean>(false);
+
   const handleChange = (file: any) => {
     setFile(file);
+    setIsUploading(true);
+    setTimeout(() => {
+      setIsUploading(false);
+    }, 8400);
   };
 
   return <div className={"w-full"}>
     <div className={"text-2xl font-bold py-6"}>Upload</div>
+    <LinearProgress className={`${isUploading ? "block" : "hidden"}`} color="secondary" />
       <div className={"w-full flex justify-center"}>
         <FileUploader
           handleChange={handleChange}

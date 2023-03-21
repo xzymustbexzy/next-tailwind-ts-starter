@@ -6259,6 +6259,11 @@
   "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-3.3.0.tgz"
   "version" "3.3.0"
 
+"deepmerge@^4.0.0":
+  "integrity" "sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A=="
+  "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.3.1.tgz"
+  "version" "4.3.1"
+
 "deepmerge@^4.2.2":
   "integrity" "sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg=="
   "resolved" "https://registry.npmjs.org/deepmerge/-/deepmerge-4.2.2.tgz"
@@ -9610,6 +9615,11 @@
     "pify" "^3.0.0"
     "strip-bom" "^3.0.0"
 
+"load-script@^1.0.0":
+  "integrity" "sha512-kPEjMFtZvwL9TaZo0uZ2ml+Ye9HUMmPwbYRJ324qF9tqMejwykJ5ggTyvzmrbBeapCAbk98BSbTeovHEEP1uCA=="
+  "resolved" "https://registry.npmjs.org/load-script/-/load-script-1.0.0.tgz"
+  "version" "1.0.0"
+
 "loader-utils@^1.1.0":
   "integrity" "sha512-qH0WSMBtn/oHuwjy/NucEgbx5dbxxnxup9s4PVXJUDHZBQY+s0NWA9rJf53RBnQZxfch7euUui7hpoAPvALZdA=="
   "resolved" "https://registry.npmjs.org/loader-utils/-/loader-utils-1.4.0.tgz"
@@ -9924,7 +9934,7 @@
     "ltgt" "~2.2.0"
     "safe-buffer" "~5.2.0"
 
-"memoize-one@^5.0.0", "memoize-one@>=3.1.1 <6":
+"memoize-one@^5.0.0", "memoize-one@^5.1.1", "memoize-one@>=3.1.1 <6":
   "integrity" "sha512-zYiwtZUcYyXKo/np96AGZAckk+FWWsUdJ3cHGGmld7+AhvcWmQyGCYUh1hc4Q/pkOhb65dQR/pqCyK0cOaHz4Q=="
   "resolved" "https://registry.npmjs.org/memoize-one/-/memoize-one-5.2.1.tgz"
   "version" "5.2.1"
@@ -12330,6 +12340,11 @@
     "prop-types" "^15.7.2"
     "styled-components" "^5.3.0"
 
+"react-fast-compare@^3.0.1":
+  "integrity" "sha512-xTYf9zFim2pEif/Fw16dBiXpe0hoy5PxcD8+OwBnTtNLfIm3g6WxhKNurY+6OmdH1u6Ta/W/Vl6vjbYP1MFnDg=="
+  "resolved" "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.1.tgz"
+  "version" "3.2.1"
+
 "react-i18next@^11.16.2":
   "integrity" "sha512-1iuZduvARUelL5ux663FvIoDZExwFO+9QtRAAt4uvs1/aun4cUZt8XBrVg7iiDgNls9cOSORAhE7Ri5KA9RMvg=="
   "resolved" "https://registry.npmjs.org/react-i18next/-/react-i18next-11.16.2.tgz"
@@ -12428,6 +12443,17 @@
     "use-sync-external-store" "^1.0.0"
     "whatwg-fetch" "^3.0.0"
     "ws" "^6.1.4"
+
+"react-player@^2.10.1":
+  "integrity" "sha512-ova0jY1Y1lqLYxOehkzbNEju4rFXYVkr5rdGD71nsiG4UKPzRXQPTd3xjoDssheoMNjZ51mjT5ysTrdQ2tEvsg=="
+  "resolved" "https://registry.npmjs.org/react-player/-/react-player-2.10.1.tgz"
+  "version" "2.10.1"
+  dependencies:
+    "deepmerge" "^4.0.0"
+    "load-script" "^1.0.0"
+    "memoize-one" "^5.1.1"
+    "prop-types" "^15.7.2"
+    "react-fast-compare" "^3.0.1"
 
 "react-query@^3.34.16":
   "integrity" "sha512-JO0Ymi58WKmvnhgg6bGIrYIeKb64KsKaPWo8JcGnmK2jJxAs2XmMBzlP75ZepSU7CHzcsWtIIyhMrLbX3pb/3w=="
